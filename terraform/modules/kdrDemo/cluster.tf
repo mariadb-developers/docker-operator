@@ -1,9 +1,9 @@
 resource "digitalocean_kubernetes_cluster" "this" {
   name          = "${var.environment}-operator-demo"
-  region        = "lon1"
+  region        = "sfo2"
   auto_upgrade  = true
   surge_upgrade = true
-  version       = "1.30.5-do.0"
+  version       = "1.28.14-do.3"
   tags          = [var.environment]
 
   node_pool {

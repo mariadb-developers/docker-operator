@@ -1,4 +1,4 @@
-name: mariadboperatordemo
+name: mariadbOperatorDemo
 volumes:
   operator-volume:
     driver: local

@@ -66,6 +66,7 @@ initialise-helm:
 
 prepare-operator:                                                                                             
 	helm repo add mariadb-operator https://helm.mariadb.com/mariadb-operator
+	helm install mariadb-operator-crds mariadb-operator/mariadb-operator-crds
 	helm install mariadb-operator mariadb-operator/mariadb-operator
 
 install-operator:
@@ -76,3 +77,7 @@ install-photo:
 	helm repo add photo-app https://mmontes11.github.io/charts
 	kubectl apply -f examples/photo-prism.yaml
 	helm install --version 0.10.0 photo-app photo-app/photoprism -f examples/photo-prism-values.yaml
+
+create-photoprism-pvc:
+	kubectl apply -f config
+	kubectl apply -f examples/photo-prism-pvc.yaml
