@@ -61,7 +61,8 @@ Once you have forked the repositories, you need to build the dockerfile and run 
     docker compose build --no-cache
     docker compose up -d
 
-To make it easy, there is a `make` script to set up your kubernetes environment. Connect in to your Docker Container.
+To make it easy, there is a `make` script to set up your kubernetes environment. Connect in to your Docker Container by running:
+$ docker exec -it <containerID> /bin/sh
 
     make init-demo
     make plan-demo
