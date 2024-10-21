@@ -93,7 +93,7 @@ After three minutes you can check the pods are available:
 You should now have a fully running Kubernetes Cluster with a MariaDB database environment. 
 To install the application run:
 
-    make install-photo
+    make create-photoprism-pvc
 
 After a few minutes you can get the services information and connect:
 
