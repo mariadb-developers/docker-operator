@@ -13,25 +13,15 @@ persistence:
   volumes:
     - name: originals
       persistentVolumeClaim:
-        claimName: photoprism
-    - name: import
-      persistentVolumeClaim:
-        claimName: photoprism
+        claimName: photoprism-originals
     - name: storage
       persistentVolumeClaim:
-        claimName: photoprism
+        claimName: photoprism-storage
 
   volumeMounts:
     - name: originals
-      subPath: originals
       mountPath: /photoprism/originals
-      readOnly: true
-    - name: import
-      subPath: import
-      mountPath: /photoprism/import
-      readOnly: true
     - name: storage
-      subPath: storage
       mountPath: /photoprism/storage
 
 database:
@@ -55,3 +45,7 @@ resources:
     memory: 300Mi
   limits:
     memory: 1Gi
+
+videoTranscoding:
+  enabled: false
+  device: "/dev/video11"

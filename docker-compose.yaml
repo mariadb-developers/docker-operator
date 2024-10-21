@@ -10,6 +10,6 @@ services:
     volumes:
       - operator-volume:/terraform/dev
       - ./.kube:/root/.kube
-      - ./examples:/operator/examples
+      - ./utils:/operator/examples
     attach: false
     env_file: ".env"
