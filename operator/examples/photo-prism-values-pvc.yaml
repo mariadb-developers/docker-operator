@@ -1,0 +1,57 @@
+image:
+  repository: photoprism/photoprism
+  tag: "240420"
+  pullPolicy: IfNotPresent
+env:
+  PHOTOPRISM_AUTH_MODE: public
+  PHOTOPRISM_READONLY: false
+  PHOTOPRISM_LOG_LEVEL: debug
+secretRef: null
+persistence:
+  enabled: true
+
+  volumes:
+    - name: originals
+      persistentVolumeClaim:
+        claimName: photoprism
+    - name: import
+      persistentVolumeClaim:
+        claimName: photoprism
+    - name: storage
+      persistentVolumeClaim:
+        claimName: photoprism
+
+  volumeMounts:
+    - name: originals
+      subPath: originals
+      mountPath: /photoprism/originals
+      readOnly: true
+    - name: import
+      subPath: import
+      mountPath: /photoprism/import
+      readOnly: true
+    - name: storage
+      subPath: storage
+      mountPath: /photoprism/storage
+
+database:
+  driver: mysql
+  dsnSecretKeyRef:
+    name: photoprism-conn
+    key: dsn
+sync:
+  enabled: false
+  cron: "* */1 * * *"
+  resources:
+    requests:
+      memory: 300Mi
+    limits:
+      memory: 1Gi
+service:
+  type: LoadBalancer
+  port: 80
+resources:
+  requests:
+    memory: 300Mi
+  limits:
+    memory: 1Gi
