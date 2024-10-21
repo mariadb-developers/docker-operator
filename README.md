@@ -78,7 +78,17 @@ You need to wait about 30 seconds for the operator to become available and then 
     make install-operator
 
 After three minutes you can check the pods are available:
+
     kubectl get pods
+
+    NAME                                                READY   STATUS    RESTARTS   AGE
+    mariadb-galera-0                                    2/2     Running   0          2m27s
+    mariadb-galera-1                                    2/2     Running   0          2m27s
+    mariadb-galera-2                                    2/2     Running   0          2m27s
+    mariadb-galera-maxscale-0                           1/1     Running   0          63s
+    mariadb-operator-cert-controller-5c8f679ff4-d7m5h   1/1     Running   0          4m31s
+    mariadb-operator-db9bb8b74-68xhq                    1/1     Running   0          4m31s
+    mariadb-operator-webhook-555dc947cd-nvvgj           1/1     Running   0          4m31s
 
 You should now have a fully running Kubernetes Cluster with a MariaDB database environment. 
 To install the application run:
