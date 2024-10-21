@@ -78,6 +78,11 @@ install-photo:
 	kubectl apply -f examples/photo-prism.yaml
 	helm install --version 0.10.0 photo-app photo-app/photoprism -f examples/photo-prism-values.yaml
 
+install-photo-pvc:
+	helm repo add photo-app https://mmontes11.github.io/charts
+	kubectl apply -f examples/photo-prism-pvc.yaml
+	kubectl apply -f examples/photo-prism.yaml
+	helm install --version 0.10.0 photo-app photo-app/photoprism -f examples/photo-prism-values-pvc.yaml
+
 create-photoprism-pvc:
-	kubectl apply -f config
 	kubectl apply -f examples/photo-prism-pvc.yaml

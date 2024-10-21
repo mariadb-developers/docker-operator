@@ -8,6 +8,8 @@ services:
     build:
       dockerfile: .docker/Dockerfile
     volumes:
-      - operator-volume:/terraform/dev 
+      - operator-volume:/terraform/dev
+      - ./.kube:/root/.kube
+      - ./examples:/operator/examples
     attach: false
     env_file: ".env"

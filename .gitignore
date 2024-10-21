@@ -1,7 +1,10 @@
 .env
 
-# Local .terraform directories
-**/.terraform/*
+# Local .kube directory for specifying k8s context
+.kube/
+
+# Local examples directory for iterative yaml changes
+examples/
 
 # .tfstate files
 *.tfstate
