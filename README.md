@@ -46,6 +46,10 @@ On (SSO) using your GitHub account. SSO allows easy navigation between the servi
 
 It is important to create your [Github](./docs/files/github/readme.md) account before creating the other accounts.
 
+Note that Digial Ocean's configuration slugs for Kubernetes versions, datacenters, and droplets change from time to time, with the Kubernetes slugs changing frequently.
+It's recommended to check the values in https://slugs.do-api.dev/ against what is referenced in the [terraform file](https://github.com/mariadb-kester/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6) before building the container you'll use to run terraform scripts to create the remote Kubernetes cluster.
+
+
 ---
 
 ## Getting Started
