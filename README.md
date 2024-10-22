@@ -48,6 +48,7 @@ It is important to create your [Github](./docs/files/github/readme.md) account b
 
 Note that Digial Ocean's configuration slugs for Kubernetes versions, datacenters, and droplets change from time to time, with the Kubernetes slugs changing frequently.
 It's recommended to check the values in https://slugs.do-api.dev/ against what is referenced in the [terraform file](https://github.com/mariadb-kester/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6) before building the container you'll use to run terraform scripts to create the remote Kubernetes cluster.
+If you decide you want to allocate more resource to the K8s cluster, check the [node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/) docs on Digital Ocean's documentation.
 
 
 ---
