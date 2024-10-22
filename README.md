@@ -46,9 +46,7 @@ On (SSO) using your GitHub account. SSO allows easy navigation between the servi
 
 It is important to create your [Github](./docs/files/github/readme.md) account before creating the other accounts.
 
-Note that Digial Ocean's configuration slugs for Kubernetes versions, datacenters, and droplets change from time to time, with the Kubernetes slugs changing frequently.
-It's recommended to check the values in https://slugs.do-api.dev/ against what is referenced in the [terraform file](https://github.com/mariadb-kester/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6) before building the container you'll use to run terraform scripts to create the remote Kubernetes cluster.
-If you decide you want to allocate more resource to the K8s cluster, check the [node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/) docs on Digital Ocean's documentation.
+
 
 
 ---
@@ -56,6 +54,12 @@ If you decide you want to allocate more resource to the K8s cluster, check the [
 ## Getting Started
 
 Hopefully you have already created the [Third Party Accounts](#third-party-accounts) required.
+
+(1) Before you begin, simply realie that you'll be building a local container to run terraform scripts, that in turn create the remote Kubernetes cluster.
+You may want to change the values in this repository before proceeding to the next step, checking them against [the Digital Ocean slugs docs on Digital Ocean's documentation](https://slugs.do-api.dev/) 
+* Digitial Ocean's K8s version slug [terraform file](https://github.com/mariadb-kester/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6.  Changes frequently!
+* K8s [node pool size / resource allocation](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11) [DO's node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/)
+* Region [region slugs](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3) 
 
 You can now [fork](./docs/files/github/fork.md) the required repositories.
 
