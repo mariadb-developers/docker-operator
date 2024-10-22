@@ -57,6 +57,7 @@ Hopefully you have already created the [Third Party Accounts](#third-party-accou
 Before you begin, simply realize that you'll be building a local container to run terraform scripts, that in turn create the remote Kubernetes cluster.
 
 (1) You can now [fork](./docs/files/github/fork.md) the required repositories.
+
 (2) You may want to change the values in this repository before proceeding to the next step, checking them against [the Digital Ocean slugs docs on Digital Ocean's documentation](https://slugs.do-api.dev/) 
 * Digitial Ocean's K8s version slug [terraform file](https://github.com/mariadb-kester/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6).  Changes frequently!
 * K8s [node pool size / resource allocation](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11) [DO's node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/)
