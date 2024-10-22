@@ -67,7 +67,7 @@ Before you begin, simply realize that you'll be building a local container to ru
 
     Copy the .env.example file and add your API KEY from Digital Ocean.
 
-(4) Once you have forked the repositories, you need to build the dockerfile and run the created container.
+(4) Once you have forked the repositories, you need to build the dockerfile and run the created container. Run these commands while in the same directory as this readme.md file.
 
     docker compose build --no-cache
     docker compose up -d
