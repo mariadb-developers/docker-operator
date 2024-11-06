@@ -60,10 +60,11 @@ Before you begin, simply realize that you'll be building a local container to ru
 
 Then [fork](./docs/files/github/fork.md) the remaining repositories that support the main one.
 
-(2) You may want to change the values in this repository before proceeding to the next step, checking them against [the slugs docs on Digital Ocean's documentation](https://slugs.do-api.dev/) 
-* Digitial Ocean's K8s version slug [terraform file](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6).  Changes frequently!
-* K8s [node pool size / resource allocation](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11) [DO's node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/)
-* Region [region slugs](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3) 
+(2) You may want to change a few settings in your your newly forked docker-operator repo, regarding how Terraform will create the target DO K8s cluster. You can find the reference values for region, droplet (virtual machine) and Kubernetes versions [here on Digital Ocean's documentation](https://slugs.do-api.dev/).
+
+* RECOMMENDED: Change Region setting [region slugs](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3)
+* RECOMMENDED: Check Digitial Ocean's K8s version slug [terraform file](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6) for currency/accuracy, as DO changes it frequently.
+* OPTIONAL: K8s [node pool size / resource allocation](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11) [DO's node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/)
 
 (3) Login to DO, and [Create your DO API token](https://cloud.digitalocean.com/account/api/tokens).  For non-production purposes like this, using full permissions is recommeded, choose an expiration timeframe that suits you, then save it somewhere secure on your local machine.  You'll use that in next step. 
 
