@@ -84,6 +84,8 @@ Note that [DO's node pool slugs documentation](https://docs.digitalocean.com/ref
 (6) To make it easy, there is a `make` script to set up your kubernetes environment. Get the `Container ID` of your running container by using `$ docker ps`.  Then connect to your Docker Container by running:
 $ docker exec -it `containerID` /bin/sh
 
+Then you can run the make targets.  The apply-demo will take a moment to complete, so be patient and watch the output until that operation completes and the K8s cluster is built.
+
     make init-demo
     make plan-demo
     make apply-demo
