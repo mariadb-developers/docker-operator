@@ -63,32 +63,34 @@ Before you begin, simply realize that you'll be building a local container to ru
 * K8s [node pool size / resource allocation](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11) [DO's node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/)
 * Region [region slugs](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3) 
 
-(3) copy .env.example to .env 
+(3) Create your DO API key https://cloud.digitalocean.com/account/api/tokens and save it locally.  You'll use that in next step. 
+
+(4) copy .env.example to .env , and add your DO API key to the file and save it.
 
     Copy the .env.example file and add your API KEY from Digital Ocean.
 
-(4) Once you have forked the repositories, you need to build the dockerfile and run the created container. Run these commands while in the same directory as this readme.md file.
+(5) Once you have forked the repositories, you need to build the dockerfile and run the created container. Run these commands while in the same directory as this readme.md file.
 
     docker compose build --no-cache
     docker compose up -d
 
-(5) To make it easy, there is a `make` script to set up your kubernetes environment. Get the `Container ID` of your running container by using `$ docker ps`.  Then connect to your Docker Container by running:
+(6) To make it easy, there is a `make` script to set up your kubernetes environment. Get the `Container ID` of your running container by using `$ docker ps`.  Then connect to your Docker Container by running:
 $ docker exec -it `containerID` /bin/sh
 
     make init-demo
     make plan-demo
     make apply-demo
 
-(6) Once your Kubernetes Cluster is built you can run the following commands:
+(7) Once your Kubernetes Cluster is built you can run the following commands:
 
     make initialise-helm
     make prepare-operator
 
-(7) You need to wait about 30 seconds for the operator to become available and then you can:
+(8) You need to wait about 30 seconds for the operator to become available and then you can:
 
     make install-operator
 
-(8) After three minutes you can check the pods are available:
+(9) After three minutes you can check the pods are available:
 
     kubectl get pods
 
@@ -101,16 +103,16 @@ $ docker exec -it `containerID` /bin/sh
     mariadb-operator-db9bb8b74-68xhq                    1/1     Running   0          4m31s
     mariadb-operator-webhook-555dc947cd-nvvgj           1/1     Running   0          4m31s
 
-(9) You should now have a fully running Kubernetes Cluster with a MariaDB database environment. 
+(10) You should now have a fully running Kubernetes Cluster with a MariaDB database environment. 
 To install the application run:
 
     make install-photo-pvc
 
-(10) After a few minutes you can get the services information and connect:
+(11) After a few minutes you can get the services information and connect:
 
     kubectl get svc 
 
-(11) Find the maxscale-gui IP and connect to it via the IP address:8989 --> mariadb-operator / MaxScale11!
+(12) Find the maxscale-gui IP and connect to it via the IP address:8989 --> mariadb-operator / MaxScale11!
 
 You will also find the service IP address for the Application.
 
