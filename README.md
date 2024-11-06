@@ -1,5 +1,5 @@
 # docker-operator
-A Docker Container to run to deploy the MariaDB Operator
+A Docker Container to run to deploy the MariaDB Operator on Digital Ocean K8s Service
 
 # Demo to deploy MariaDB Operator and PhotoPrism Application with Docker/Terraform
 
