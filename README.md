@@ -72,8 +72,8 @@ Before you begin, simply realize that you'll be building a local container to ru
     docker compose build --no-cache
     docker compose up -d
 
-(5) To make it easy, there is a `make` script to set up your kubernetes environment. Connect in to your Docker Container by running:
-$ docker exec -it <containerID> /bin/sh
+(5) To make it easy, there is a `make` script to set up your kubernetes environment. Get the `Container ID` of your running container by using `$ docker ps`.  Then connect to your Docker Container by running:
+$ docker exec -it `containerID` /bin/sh
 
     make init-demo
     make plan-demo
