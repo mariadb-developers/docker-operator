@@ -22,7 +22,7 @@ For this demonstration to work, you will require various [third party accounts](
 **Nothing in this demonstration is designed to be used in production and this is not supplied, supported or endorsed by MariaDB.**
 
 *Please note the free $200 credit is enough to run this demonstration, however, if you do not decommission your services, or you use more than the free credit you will be liable for the cost.*
-
+*Don't worry, Digital Ocean makes it easy to do with a cascade delete of related resources, and there is a terraform script for that purpose just in case.
 ---
 
 ### Prerequisites
