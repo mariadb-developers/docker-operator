@@ -64,10 +64,11 @@ Then [fork](./docs/files/github/fork.md) the remaining repositories that support
 
 The [cluster.tf](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf) file is what controls the K8s deployment parameters, and is where you make edits.
 
-* RECOMMENDED: Change Region setting at [Line 3](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3)
+* RECOMMENDED: Change Region setting at [Line 3](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3).
 * RECOMMENDED: Check Digitial Ocean's K8s version slug at [Line 6](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6) for currency/accuracy, as DO changes it frequently.
-* OPTIONAL: K8s node pool size / resource allocation at [line 11](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11)
-[DO's node pool slugs documentation](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/)
+* OPTIONAL: K8s node pool size / resource allocation at [line 11](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11).
+
+Note that [DO's node pool slugs documentation](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/) is in a different location.
 
 (3) Login to DO, and [Create your DO API token](https://cloud.digitalocean.com/account/api/tokens).  For non-production purposes like this, using full permissions is recommeded, choose an expiration timeframe that suits you, then save it somewhere secure on your local machine.  You'll use that in next step. 
 
