@@ -56,7 +56,9 @@ It is important to create your [Github](./docs/files/github/readme.md) account b
 Hopefully you have already created the [Third Party Accounts](#third-party-accounts) required.
 Before you begin, simply realize that you'll be building a local container to run terraform scripts, that in turn create the remote Kubernetes cluster.
 
-(1) You can now [fork](./docs/files/github/fork.md) the required repositories.
+(1) Create a local directory for development, and then fork this repo to it. https://github.com/mariadb-pieterhumphrey/docker-operator/
+
+Then [fork](./docs/files/github/fork.md) the remaining repositories that support the main one.
 
 (2) You may want to change the values in this repository before proceeding to the next step, checking them against [the slugs docs on Digital Ocean's documentation](https://slugs.do-api.dev/) 
 * Digitial Ocean's K8s version slug [terraform file](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6).  Changes frequently!
