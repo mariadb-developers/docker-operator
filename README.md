@@ -95,7 +95,7 @@ Then you can run the make targets.  The apply-demo will take a moment to complet
     make initialise-helm
     make prepare-operator
 
-(8) You need to wait about 30 seconds for the operator to become available and then you can:
+(8) You need to wait about 30 seconds for the operator to become available.  Then you can run:
 
     make install-operator
 
@@ -112,8 +112,10 @@ Then you can run the make targets.  The apply-demo will take a moment to complet
     mariadb-operator-db9bb8b74-68xhq                    1/1     Running   0          4m31s
     mariadb-operator-webhook-555dc947cd-nvvgj           1/1     Running   0          4m31s
 
+Make sure all containers report `READY` status before proceeding to the next step.
+
 (10) You should now have a fully running Kubernetes Cluster with a MariaDB database environment. 
-To install the application run:
+To install the [PhotoPrism](https://docs.photoprism.app/) application run:
 
     make install-photo-pvc
 
