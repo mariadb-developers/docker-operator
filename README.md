@@ -121,6 +121,7 @@ The destroy command will delete the infrastructure. This is important, if you ha
 `make destroy-demo`
 
 If you are running the destroy command, it will ask you to confirm by typing `yes` at the prompt.
+Alternatively, go to the Digital Ocean console and delete the K8s cluster from the web console, checking yes when prompted to cascade delete the associated resources.
 
 ### Contributing to this project
 
