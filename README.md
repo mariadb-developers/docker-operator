@@ -1,7 +1,7 @@
 # docker-operator
 A Docker Container to run to deploy the MariaDB Operator
 
-# Terraform Demo to build MariaDB Enterprise in Containers
+# Demo to deploy MariaDB Operator and PhotoPrism Application with Docker/Terraform
 
 [![License](https://img.shields.io/badge/mit-blue.svg)](https://opensource.org/licenses/mit)
 ![GitHub stars](https://img.shields.io/github/stars/mariadb-kester/docker-operator?style=social)
