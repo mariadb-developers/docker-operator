@@ -76,7 +76,7 @@ Note that [DO's node pool slugs documentation](https://docs.digitalocean.com/ref
 
     Copy the .env.example file and add your API KEY from Digital Ocean.
 
-(5) Once you have forked the repositories, you need to build the dockerfile and run the created container. Run these commands while in the same directory as this readme.md file.
+(5) With edits in your forked repo done, now you can build the dockerfile and run the created container. Run these commands while in the same directory as this readme.md file.
 
     docker compose build --no-cache
     docker compose up -d
