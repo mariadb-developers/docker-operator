@@ -54,7 +54,7 @@ It is important to create your [Github](./docs/files/github/readme.md) account b
 ## Getting Started
 
 Hopefully you have already created the [Third Party Accounts](#third-party-accounts) required.
-Before you begin, simply realize that you'll be building a local container to run terraform scripts, that in turn create the remote Kubernetes cluster.
+Before you begin, simply realize that you'll be building a local container to run terraform scripts, that in turn create the remote Kubernetes cluster on Digital Ocean.
 
 (1) Create a local directory for development, and then fork this repo to it. https://github.com/mariadb-pieterhumphrey/docker-operator/
 
@@ -65,7 +65,7 @@ Then [fork](./docs/files/github/fork.md) the remaining repositories that support
 * K8s [node pool size / resource allocation](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11) [DO's node pool slugs](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/)
 * Region [region slugs](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3) 
 
-(3) Create your DO API key https://cloud.digitalocean.com/account/api/tokens and save it locally.  You'll use that in next step. 
+(3) Login to DO, and [Create your DO API token](https://cloud.digitalocean.com/account/api/tokens).  For non-production purposes like this, using full permissions is recommeded, choose an expiration timeframe that suits you, then save it somewhere secure on your local machine.  You'll use that in next step. 
 
 (4) copy .env.example to .env , and add your DO API key to the file and save it.
 
