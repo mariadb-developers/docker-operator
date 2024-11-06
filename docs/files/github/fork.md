@@ -24,3 +24,7 @@ default.
 ![GitHub Create Fork](../../images/github/GH_create_fork.png)
 
 Click the Create fork button and the system will fork the repository.
+
+Make sure all forks are in the same local development directory:
+
+![GitHub Create Fork](../../images/github/dir-structure.png)
