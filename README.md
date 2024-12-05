@@ -7,11 +7,10 @@ A Docker Container for deploying the MariaDB Operator to Digital Ocean K8s Servi
 ![GitHub stars](https://img.shields.io/github/stars/mariadb-kester/docker-operator?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/mariadb-kester/docker-operator?style=social)
 
-This project is designed to create a containerised Kubernetes infrastructure on DigitalOcean, and deploy the following
-using automation:
+This project is designed to create a containerised Kubernetes infrastructure on DigitalOcean, and then deploy:
 
 - [MariaDB Kubernetes Operator]([https://mariadb.com])
-- Photo App test application
+- [PhotoPrism](https://docs.photoprism.app/) application
 
 For this demonstration to work, you will require various [third party accounts](#third-party-accounts).
 
