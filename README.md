@@ -9,7 +9,7 @@ A Docker Container for deploying the MariaDB Operator to Digital Ocean K8s Servi
 
 This project is designed to create a containerised Kubernetes infrastructure on DigitalOcean, and then deploy:
 
-- [MariaDB Kubernetes Operator]([https://mariadb.com])
+- [MariaDB Kubernetes Operator](https://github.com/mariadb-operator/mariadb-operator/)
 - [PhotoPrism](https://docs.photoprism.app/) application
 
 For this demonstration to work, you will require various [third party accounts](#third-party-accounts).
@@ -55,17 +55,17 @@ It is important to create your [Github](./docs/files/github/readme.md) account b
 Hopefully you have already created the [Third Party Accounts](#third-party-accounts) required.
 Before you begin, simply realize that you'll be building a local container to run terraform scripts, that in turn create the remote Kubernetes cluster on Digital Ocean.
 
-(1) Create a local directory for development, and then fork this repo to it. https://github.com/mariadb-pieterhumphrey/docker-operator/
+(1) Create a local directory for development, and then fork this repo to it. [https://github.com/mariadb-developers/docker-operator](https://github.com/mariadb-developers/docker-operator)
 
 Then [fork](./docs/files/github/fork.md) the remaining repositories that support the main one.
 
 (2) You may want to change a few settings in your your newly forked docker-operator repo, regarding how Terraform will create the target DO K8s cluster. You can find the reference values for region, droplet (virtual machine) and Kubernetes versions [here on Digital Ocean's documentation](https://slugs.do-api.dev/).
 
-The [cluster.tf](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf) file is what controls the K8s deployment parameters, and is where you make edits.
+The [cluster.tf](https://github.com/mariadb-developers/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf) file is what controls the K8s deployment parameters, and is where you make edits.
 
-* RECOMMENDED: Change Region setting at [Line 3](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3).
-* RECOMMENDED: Check Digitial Ocean's K8s version slug at [Line 6](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6) for currency/accuracy, as DO changes it frequently.
-* OPTIONAL: K8s node pool size / resource allocation at [line 11](https://github.com/mariadb-pieterhumphrey/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11).
+* RECOMMENDED: Change Region setting at [Line 3](https://github.com/mariadb-developers/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L3).
+* RECOMMENDED: Check Digitial Ocean's K8s version slug at [Line 6](https://github.com/mariadb-developers/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L6) for currency/accuracy, as DO changes it frequently.
+* OPTIONAL: K8s node pool size / resource allocation at [line 11](https://github.com/mariadb-developers/docker-operator/blob/main/terraform/modules/kdrDemo/cluster.tf#L11).
 
 Note that [DO's node pool slugs documentation](https://docs.digitalocean.com/reference/terraform/reference/resources/kubernetes_node_pool/) is in a different location.
 
@@ -157,7 +157,7 @@ If you want to contact me you can reach me at kesterriley@hotmail.com.
 
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
-This project uses the following license: [MIT](https://github.com/mariadb-kester/docker-operator/blob/main/LICENSE).
+This project uses the following license: [MIT](https://github.com/mariadb-developers/docker-operator/blob/main/LICENSE).
 
 ### Disclaimer
 
