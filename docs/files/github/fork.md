@@ -8,10 +8,10 @@ original repository. You can fetch updates from or submit changes to the origina
 To allow you to use, maintain and adjust the projects; and to be able to track your own history,you will need to fork
 the following repositories.
 
-- https://github.com/mariadb-pieterhumphrey/terraformDemo
-- https://github.com/mariadb-pieterhumphrey/mariadbServerDocker
-- https://github.com/mariadb-pieterhumphrey/mariadbMaxscaleDocker
-- https://github.com/mariadb-pieterhumphrey/phpAppDocker
+- [https://github.com/mariadb-pieterhumphrey/terraformDemo](https://github.com/mariadb-developers/terraformDemo)
+- [https://github.com/mariadb-pieterhumphrey/mariadbServerDocker](https://github.com/mariadb-developers/mariadbServerDocker)
+- [https://github.com/mariadb-pieterhumphrey/mariadbMaxscaleDocker](https://github.com/mariadb-developers/mariadbMaxscaleDocker)
+- [https://github.com/mariadb-pieterhumphrey/phpAppDocker](https://github.com/mariadb-developers/phpAppDocker)
 
 Ensure you are logged in to GitHub and then visit each of the listed URL. (The details will be different for each
 repository)
